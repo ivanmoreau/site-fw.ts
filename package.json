@@ -1,8 +1,10 @@
 {
   "name": "org",
   "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
+  "license": "MPL-2.0",
+  "scripts": {
+    "static": "bun run packages/static/src/index.ts"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {

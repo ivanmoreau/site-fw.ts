@@ -1,0 +1,15 @@
+{
+  "name": "static",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "preact": "^10.24.1",
+    "preact-render-to-string": "^6.5.11"
+  }
+}
