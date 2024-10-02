@@ -5,9 +5,8 @@
  */
 
 import type {JSX} from "./jsx-runtime";
-import {type VNode} from "preact";
+import {type VNode} from "./types/preact-types"
 import fs from "node:fs/promises"
-import {render} from "preact-render-to-string";
 import {renderToStringAsync} from "./preact-code/render";
 
 type NotEmpty<T> = keyof T extends never ? never : T;

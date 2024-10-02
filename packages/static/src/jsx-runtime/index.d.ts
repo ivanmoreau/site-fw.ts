@@ -26,34 +26,11 @@
  *   SOFTWARE.
  */
 
-import {Attributes, ClassAttributes, ComponentChildren, ComponentType, h, RenderableProps, VNode} from "preact";
 import {JSXInternal} from "preact/src/jsx";
+import {_JSXInternal} from "../types/types";
+import {VNode, ComponentChildren, Attributes, ClassAttributes} from "../types/preact-types";
 
-
-declare namespace JSX {
-    export interface FunctionComponent<P = {}> {
-        (props: RenderableProps<P>, context?: any): VNode<any> | Promise<any>;
-
-        displayName?: string;
-        defaultProps?: Partial<P> | undefined;
-    }
-
-    export type IntrinsicElements = h.JSX.IntrinsicElements
-
-    export type ElementType<P = any> =
-        | {
-        [K in keyof IntrinsicElements]: P extends IntrinsicElements[K]
-            ? K
-            : never;
-    }[keyof IntrinsicElements]
-        | FunctionComponent<P>;
-
-    export interface Element extends VNode<any> {}
-
-    export interface ElementChildrenAttribute {
-        children: any;
-    }
-}
+export import JSX = _JSXInternal
 
 export function jsx(
     type: 'input',
