@@ -31,6 +31,7 @@ import {_JSXInternal} from "../types/types";
 import {VNode, ComponentChildren, Attributes, ClassAttributes} from "../types/preact-types";
 
 export import JSX = _JSXInternal
+import {FunctionComponent} from "preact";
 
 export function jsx(
     type: 'input',
@@ -80,3 +81,5 @@ export function jsx<P>(
 ): VNode<Attributes & P> | Promise<VNode<Attributes & P>>;
 
 export const jsxDev: typeof jsx
+
+export const Fragment: FunctionComponent<{}>

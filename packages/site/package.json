@@ -1,14 +1,30 @@
 {
   "name": "site",
   "module": "src/index.tsx",
+  "scripts": {
+    "build": "bun run src/index.tsx & tailwindcss -i src/main.css -o dist/main.css",
+    "watch": "bun x watch 'bun run build' src/"
+  },
   "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@catppuccin/highlightjs": "^1.0.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/bun": "latest",
+    "@types/lodash": "^4.17.10",
+    "@types/slug": "^5.0.9",
+    "tailwindcss": "^3.4.13",
+    "watch": "^1.0.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "highlight.js": "^11.10.0",
+    "lodash": "^4.17.21",
+    "lorem-ipsum": "^2.0.8",
+    "marked": "^14.1.2",
+    "marked-highlight": "^2.1.4",
+    "slug": "^9.1.0",
     "static": "file:../static"
   }
 }
